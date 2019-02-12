@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+
+  mysql-server:
+    image: mysql:5.6
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: sk
+      MYSQL_PASSWORD: my_password
+      MYSQL_DATABASE: testdb1
+    networks: 
+     - mysql_net
+
+  user:
+    depends_on:
+       - mysql-server
+    build: .
+    restart: always
+    ports:
+      - 8085:8080
+    networks: 
+     - mysql_net
+  
+volumes:
+  mysql_data: {}
+  
+networks:
+  mysql_net:
+    driver: bridge
