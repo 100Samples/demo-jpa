@@ -3,7 +3,7 @@ Simple Demo using Spring Boot + MySql + Docker compose to run and link container
 
 To get it started, follow the below instructions
 1. clone the repository
-2. run 'mvn clean install -DskipTests'
+2. run 'mvn clean install'
 3. confirm that you have the target folder generated containing demo-jpa.jar
 4. make sure you have docker installed
 5. run 'docker-compose up' # this command will spin up all the containers, establish the necessary links
