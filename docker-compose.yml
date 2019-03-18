@@ -9,8 +9,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: sk
-      MYSQL_PASSWORD: my_password
+      MYSQL_USER: sa
+      MYSQL_PASSWORD: password
       MYSQL_DATABASE: testdb1
     networks: 
      - mysql_net
