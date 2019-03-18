@@ -1,4 +1,4 @@
-# docker-jpa-sample
+# Docker-compose with jpa-sample
 Simple Demo to demonstrate docker-compose command.
 I'm using Spring Boot + MySql as demonstration to run and link containers. 
 
